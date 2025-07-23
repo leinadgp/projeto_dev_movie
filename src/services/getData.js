@@ -1,11 +1,25 @@
 import api from './api'
 
+export async function getHomeMovies() {
+  const {
+    data: { results }
+  } = await api.get('/trending/all/day?language=pt-BR-US')
+
+  return results
+}
+export async function getSeriesMovies() {
+  const {
+    data: { results }
+  } = await api.get('tv/popular?language=pt-BR-US')
+
+  return results
+}
 export async function getMovies() {
   const {
     data: { results }
   } = await api.get('/movie/popular?language=pt-BR-US')
 
-  return results[0]
+  return results
 }
 
 export async function getTopMovies() {
@@ -44,6 +58,14 @@ export async function getMovieVideos(movieId) {
   const {
     data: { results }
   } = await api.get(`/movie/${movieId}/videos?language=pt-BR`)
+  return results
+}
+export async function getSeriesVideos(movieId) {
+  console.log(`/tv/${movieId}/videos?language=pt-BR`)
+  const {
+    data: { results }
+  } = await api.get(`/tv/${movieId}/videos?language=pt-BR`)
+  console.log(results)
 
   return results
 }
@@ -66,6 +88,12 @@ export async function getMovieSimilar(movieId) {
 
 export async function getMovieById(movieId) {
   const { data } = await api.get(`/movie/${movieId}?language=pt-BR`)
+  console.log(data)
+  return data
+}
 
+export async function getSerieById(movieId) {
+  const { data } = await api.get(`/tv/${movieId}?language=pt-BR`)
+  console.log(data)
   return data
 }

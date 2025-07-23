@@ -1,17 +1,22 @@
 import { useState, useEffect } from 'react'
 
-import { getMovieVideos } from '../../services/getData.js'
+import { getMovieVideos, getSeriesVideos } from '../../services/getData.js'
 import { Container, Background, Icone } from './styles.js'
 
-function Modal({ movieId, setShowModal }) {
+function Modal({ movieId, setShowModal, series }) {
   const [movie, setMovie] = useState([])
 
   useEffect(() => {
-    async function getMovies() {
-      setMovie(await getMovieVideos(movieId))
+    async function fetchData() {
+      if (series) {
+        setMovie(await getSeriesVideos(movieId))
+      } else {
+        setMovie(await getMovieVideos(movieId))
+      }
     }
-    getMovies()
-  }, [movieId])
+
+    fetchData()
+  }, [movieId, series])
 
   return (
     <Background onClick={() => setShowModal(false)}>

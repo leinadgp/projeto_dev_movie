@@ -6,7 +6,7 @@ import Modal from '../../components/Modal'
 import Slider from '../../components/Slider'
 import {
   getPeoplePopular,
-  getMovies,
+  getHomeMovies,
   getTopMovies,
   getTopSeries,
   getPopularSeries
@@ -32,7 +32,7 @@ function Home() {
   useEffect(() => {
     async function getAllData() {
       Promise.all([
-        getMovies(),
+        getHomeMovies(),
         getTopMovies(),
         getTopSeries(),
         getPopularSeries(),
@@ -47,22 +47,22 @@ function Home() {
         })
         .catch((error) => console.error(error))
     }
-    getAllData(getMovies)
+    getAllData(getHomeMovies)
   }, [])
 
   return (
     <>
-      {movie && (
-        <Background $img={getImages(movie.backdrop_path)}>
+      {movie[0] && (
+        <Background $img={getImages(movie[0].backdrop_path)}>
           {showModal && (
-            <Modal movieId={movie.id} setShowModal={setShowModal} />
+            <Modal movieId={movie[0].id} setShowModal={setShowModal} />
           )}
           <ContainerMain>
             <Title>
-              <h1>{movie.title}</h1>
-              <p>{movie.overview}</p>
+              <h1>{movie[0].title}</h1>
+              <p>{movie[0].overview}</p>
               <ContainerButtons>
-                <Button red onClick={() => navigate(`/detalhe/${movie.id}`)}>
+                <Button red onClick={() => navigate(`/detalhe/${movie[0].id}`)}>
                   Assita Agora
                 </Button>
                 <Button onClick={() => setShowModal(true)}>
@@ -71,7 +71,7 @@ function Home() {
               </ContainerButtons>
             </Title>
             <Poster>
-              <img src={getImages(movie.poster_path)} alt={movie.title} />
+              <img src={getImages(movie[0].poster_path)} alt={movie[0].title} />
             </Poster>
           </ContainerMain>
         </Background>
