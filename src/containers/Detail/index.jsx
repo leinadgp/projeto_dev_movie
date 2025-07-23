@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import Credits from '../../components/Credits'
+import Slider from '../../components/Slider'
 import SpanGenres from '../../components/SpanGenres'
 import {
   getMovieSimilar,
@@ -18,9 +19,6 @@ function Detail() {
   const [movieById, setMovieById] = useState([''])
   const [credits, setCredits] = useState([''])
   const [movieVidos, setMovieVidos] = useState([''])
-  console.log(movieVidos)
-  console.log(movieSimiliar)
-
   useEffect(() => {
     async function getAllData() {
       Promise.all([
@@ -62,19 +60,24 @@ function Detail() {
               <Trailers>
                 {movieVidos &&
                   movieVidos.map((video) => (
-                    <iframe
-                      key={video.id}
-                      width="80%"
-                      height="350"
-                      src={`https://www.youtube.com/embed/${video.key}`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
+                    <div key={video.id}>
+                      <h4>{video.name}</h4>
+                      <iframe
+                        width="80%"
+                        height="350"
+                        src={`https://www.youtube.com/embed/${video.key}`}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                   ))}
               </Trailers>
             </Info>
           </Container>
+          {movieSimiliar && (
+            <Slider info={movieSimiliar} title="Filmes Similares" />
+          )}
         </>
       )}
     </>

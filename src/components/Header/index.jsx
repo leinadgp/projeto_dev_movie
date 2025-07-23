@@ -18,16 +18,16 @@ function Header() {
   }
 
   return (
-    <Container changeBackground={changeBackground}>
+    <Container $changeBackground={changeBackground}>
       <img src={Logo} />
       <Menu>
-        <Li isActive={pathname === '/'}>
+        <Li $isActive={pathname === '/'}>
           <Link to="/">Home</Link>
         </Li>
-        <Li isActive={pathname.includes('/filmes')}>
+        <Li $isActive={pathname.includes('/filmes')}>
           <Link to="/filmes">Filmes</Link>
         </Li>
-        <Li isActive={pathname.includes('/series')}>
+        <Li $isActive={pathname.includes('/series')}>
           <Link to="/series">Series</Link>
         </Li>
       </Menu>

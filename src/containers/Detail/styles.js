@@ -85,4 +85,9 @@ export const Credits = styled.div`
 export const Trailers = styled.div`
   width: 100%;
   height: 100%;
+  h4 {
+    color: #fff;
+    font-size: 19px;
+    margin-top: 15px;
+  }
 `

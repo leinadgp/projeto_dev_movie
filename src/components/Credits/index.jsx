@@ -2,7 +2,6 @@ import { getImages } from '../../utils/getImages.js'
 import { Container, Title } from './styles.js'
 
 function Credits({ credits }) {
-  console.log(credits)
   return (
     <>
       <Title>Créditos</Title>
