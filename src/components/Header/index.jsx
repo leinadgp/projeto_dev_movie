@@ -17,7 +17,6 @@ function Header() {
     }
   }
 
-  console.log(pathname)
   return (
     <Container changeBackground={changeBackground}>
       <img src={Logo} />

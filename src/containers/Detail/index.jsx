@@ -10,7 +10,7 @@ import {
   getMovieVideos
 } from '../../services/getData'
 import { getImages } from '../../utils/getImages'
-import { Container, Background, Cover, Info } from './styles.js'
+import { Container, Background, Cover, Info, Trailers } from './styles.js'
 
 function Detail() {
   const { id } = useParams()
@@ -18,8 +18,8 @@ function Detail() {
   const [movieById, setMovieById] = useState([''])
   const [credits, setCredits] = useState([''])
   const [movieVidos, setMovieVidos] = useState([''])
-  console.log(movieSimiliar)
   console.log(movieVidos)
+  console.log(movieSimiliar)
 
   useEffect(() => {
     async function getAllData() {
@@ -30,10 +30,6 @@ function Detail() {
         getMovieVideos(id)
       ])
         .then(([movieSimilar, movieById, credits, movieVidos]) => {
-          console.log(movieSimilar)
-          console.log(movieById)
-          console.log(credits)
-          console.log(movieVidos)
           setMovieSimiliar(movieSimilar)
           setMovieById(movieById)
           setCredits(credits)
@@ -63,6 +59,20 @@ function Detail() {
               <div>
                 <Credits credits={credits} />
               </div>
+              <Trailers>
+                {movieVidos &&
+                  movieVidos.map((video) => (
+                    <iframe
+                      key={video.id}
+                      width="80%"
+                      height="350"
+                      src={`https://www.youtube.com/embed/${video.key}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ))}
+              </Trailers>
             </Info>
           </Container>
         </>

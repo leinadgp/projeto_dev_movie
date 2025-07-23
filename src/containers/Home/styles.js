@@ -10,7 +10,7 @@ const scale = keyframes`
 `
 
 export const Background = styled.div`
-  background-image: url(${(props) => props.img});
+  background-image: url(${(props) => props.$img});
   height: 100vh;
   background-size: cover;
   background-position: center;

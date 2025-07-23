@@ -82,3 +82,7 @@ export const SpanGenres = styled.div``
 export const Credits = styled.div`
   width: 100%;
 `
+export const Trailers = styled.div`
+  width: 100%;
+  height: 100%;
+`

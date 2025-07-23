@@ -5,7 +5,7 @@ export async function getMovies() {
     data: { results }
   } = await api.get('/movie/popular?language=pt-BR-US')
 
-  return results[0]
+  return results[1]
 }
 
 export async function getTopMovies() {
@@ -45,13 +45,15 @@ export async function getMovieVideos(movieId) {
     data: { results }
   } = await api.get(`/movie/${movieId}/videos?language=pt-BR`)
 
-  return results[0]
+  return results
 }
 
 export async function getCredits(movieId) {
-  const { data } = await api.get(`/movie/${movieId}/credits?language=pt-BR`)
+  const {
+    data: { cast }
+  } = await api.get(`/movie/${movieId}/credits?language=pt-BR`)
 
-  return data
+  return cast
 }
 
 export async function getMovieSimilar(movieId) {

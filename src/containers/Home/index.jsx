@@ -53,7 +53,7 @@ function Home() {
   return (
     <>
       {movie && (
-        <Background img={getImages(movie.backdrop_path)}>
+        <Background $img={getImages(movie.backdrop_path)}>
           {showModal && (
             <Modal movieId={movie.id} setShowModal={setShowModal} />
           )}

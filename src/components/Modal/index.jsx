@@ -10,7 +10,7 @@ function Modal({ movieId, setShowModal }) {
     async function getMovies() {
       setMovie(await getMovieVideos(movieId))
     }
-    if (movieId) getMovies()
+    getMovies()
   }, [movieId])
 
   return (
@@ -18,11 +18,11 @@ function Modal({ movieId, setShowModal }) {
       <Container>
         <Icone onClick={() => setShowModal(false)} />
 
-        {movie && (
+        {movie.length > 0 && movie[0].key && (
           <iframe
             width="80%"
             height="350"
-            src={`https://www.youtube.com/embed/${movie.key}`}
+            src={`https://www.youtube.com/embed/${movie[0].key}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
