@@ -15,5 +15,10 @@ export default createGlobalStyle`
         background-color: #000;  
         overflow-x: hidden;
     }
+    img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 `
