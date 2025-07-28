@@ -1,4 +1,4 @@
-import { Route, Routes, HashRouter } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 import Detail from '../containers/Detail'
 import Home from '../containers/Home'
@@ -8,16 +8,14 @@ import DefaultLayout from '../layout/DefaultLayout'
 
 function Router() {
   return (
-    <HashRouter>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/filmes" element={<Movies />} />
-          <Route path="/series" element={<Series />} />
-          <Route path="/detalhe/:id" element={<Detail />} />
-        </Route>
-      </Routes>
-    </HashRouter>
+    <Routes>
+      <Route element={<DefaultLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/filmes" element={<Movies />} />
+        <Route path="/series" element={<Series />} />
+        <Route path="/detalhe/:id" element={<Detail />} />
+      </Route>
+    </Routes>
   )
 }
 
