@@ -40,21 +40,21 @@ function Series() {
 
   return (
     <>
-      {movie[7] && (
-        <Background $img={getImages(movie[7].backdrop_path)}>
+      {movie[3] && (
+        <Background $img={getImages(movie[3].backdrop_path)}>
           {showModal && (
             <Modal
-              movieId={movie[7].id}
+              movieId={movie[3].id}
               setShowModal={setShowModal}
               $series={true}
             />
           )}
           <ContainerMain>
             <Title>
-              <h1>{movie[7].name}</h1>
-              <p>{movie[7].overview}</p>
+              <h1>{movie[3].name}</h1>
+              <p>{movie[3].overview}</p>
               <ContainerButtons>
-                <Button red onClick={() => navigate(`/detalhe/${movie[7].id}`)}>
+                <Button red onClick={() => navigate(`/detalhe/${movie[3].id}`)}>
                   Assita Agora
                 </Button>
                 <Button onClick={() => setShowModal(true)}>
@@ -63,7 +63,7 @@ function Series() {
               </ContainerButtons>
             </Title>
             <Poster>
-              <img src={getImages(movie[7].poster_path)} alt={movie[7].title} />
+              <img src={getImages(movie[3].poster_path)} alt={movie[3].title} />
             </Poster>
           </ContainerMain>
         </Background>
