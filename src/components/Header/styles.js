@@ -5,11 +5,12 @@ export const Container = styled.div`
   min-height: 80px;
   top: 0;
   z-index: 999;
-  width: 97vw;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  padding-right: 50px;
   background-color: ${(props) =>
     props.$changeBackground ? '#000' : 'transparent'};
   transition: background-color 1s ease-in-out;
