@@ -13,5 +13,6 @@ export const Container = styled.div`
   }
   .swiper-wrapper {
     display: flex;
+    overflow-x: hidden;
   }
 `
