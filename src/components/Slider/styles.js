@@ -5,8 +5,7 @@ export const Container = styled.div`
   background: #000;
   margin-top: 0 25px;
   width: 100%;
-  overflow: hidden;
- overflow-x: hidden;  
+  overflow: hidden; 
   h2 {
     font-size: 24px;
     margin: 50px 0 20px 20px;
