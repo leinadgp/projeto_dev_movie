@@ -14,10 +14,6 @@ export default createGlobalStyle`
     body {
         background-color: #000;  
     }
-    img {
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
 
 `
