@@ -88,9 +88,10 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
     color: #fff;
   }
 `;function Nw({item:n}){return V.jsxs(Dw,{children:[V.jsx("img",{src:an(n.poster_path||n.profile_path||"")}),V.jsx("h3",{children:n.name||n.title||""})]})}const Bw=Se.div`
-  width: 100%;
+  width: 100vw;
   background: #000;
-  margin-top: 0 25px;
+  margin: 0 25px;
+  overflow: hidden;
   h2 {
     font-size: 24px;
     margin: 50px 0 20px 20px;
@@ -462,11 +463,12 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
   min-height: 80px;
   top: 0;
   z-index: 999;
-  width: 97vw;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  padding-right: 50px;
   background-color: ${n=>n.$changeBackground?"#000":"transparent"};
   transition: background-color 1s ease-in-out;
   img {
@@ -513,5 +515,6 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
     body {
         background-color: #000;  
     }
+}
 
 `;AS.createRoot(document.getElementById("root")).render(V.jsxs(z.StrictMode,{children:[V.jsx(Q1,{children:V.jsx(hA,{})}),V.jsx(mA,{})]}));
