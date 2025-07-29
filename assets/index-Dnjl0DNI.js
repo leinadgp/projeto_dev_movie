@@ -298,8 +298,9 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
   justify-content: space-around;
   align-items: center;
   @media (max-width: 768px) {
+    height: 130%;
     flex-direction: column-reverse;
-    margin-top: 100px;
+    margin-top: 80px;
   }
 `,kT=Se.div`
   display: flex;
@@ -321,11 +322,21 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
     margin-bottom: 20px;
   }
   @media (max-width: 768px) {
-    width: 90%;
+    width: 95%;
     text-align: justify;
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 `,$T=Se.div`
   width: 30%;
+  display: flex;
   align-items: center;
   justify-content: center;
   img {
@@ -334,8 +345,11 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
     animation: ${YT} 0.5s linear;
   }
   @media (max-width: 768px) {
-    width: 50%;
+    width: 100%;
     justify-content: center;
+    img {
+      width: 120px;
+    }
   }
 `,PT=Se.div`
   display: flex;
@@ -379,8 +393,9 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
   justify-content: space-around;
   align-items: center;
   @media (max-width: 768px) {
+    height: 130%;
     flex-direction: column-reverse;
-    margin-top: 100px;
+    margin-top: 80px;
   }
 `,IT=Se.div`
   display: flex;
@@ -402,17 +417,34 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
     margin-bottom: 20px;
   }
   @media (max-width: 768px) {
-    width: 90%;
+    width: 95%;
     text-align: justify;
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 `,WT=Se.div`
   width: 30%;
+  display: flex;
   align-items: center;
   justify-content: center;
   img {
     width: 250px;
     border-radius: 30px;
     animation: ${KT} 0.5s linear;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    img {
+      width: 120px;
+    }
   }
 `,eA=Se.div`
   display: flex;
@@ -456,8 +488,9 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
   justify-content: space-around;
   align-items: center;
   @media (max-width: 768px) {
+    height: 130%;
     flex-direction: column-reverse;
-    margin-top: 100px;
+    margin-top: 80px;
   }
 `,iA=Se.div`
   display: flex;
@@ -479,17 +512,34 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
     margin-bottom: 20px;
   }
   @media (max-width: 768px) {
-    width: 90%;
+    width: 95%;
     text-align: justify;
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 `,rA=Se.div`
   width: 30%;
+  display: flex;
   align-items: center;
   justify-content: center;
   img {
     width: 250px;
     border-radius: 30px;
     animation: ${nA} 0.5s linear;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    img {
+      width: 120px;
+    }
   }
 `,sA=Se.div`
   display: flex;
