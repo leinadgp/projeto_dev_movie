@@ -69,6 +69,7 @@ export const Title = styled.div`
 
 export const Poster = styled.div`
   width: 30%;
+  display: flex;
   align-items: center;
   justify-content: center;
   img {
@@ -77,7 +78,7 @@ export const Poster = styled.div`
     animation: ${scale} 0.5s linear;
   }
   @media (max-width: 768px) {
-    width: 50%;
+    width: 100%;
     justify-content: center;
   }
 `
