@@ -38,8 +38,9 @@ export const ContainerMain = styled.div`
   justify-content: space-around;
   align-items: center;
   @media (max-width: 768px) {
+    height: 130%;
     flex-direction: column-reverse;
-    margin-top: 100px;
+    margin-top: 80px;
   }
 `
 export const Title = styled.div`
@@ -62,19 +63,36 @@ export const Title = styled.div`
     margin-bottom: 20px;
   }
   @media (max-width: 768px) {
-    width: 90%;
+    width: 95%;
     text-align: justify;
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 `
 
 export const Poster = styled.div`
   width: 30%;
+  display: flex;
   align-items: center;
   justify-content: center;
   img {
     width: 250px;
     border-radius: 30px;
     animation: ${scale} 0.5s linear;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    img {
+      width: 120px;
+    }
   }
 `
 export const ContainerButtons = styled.div`
