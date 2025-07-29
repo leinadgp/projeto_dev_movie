@@ -76,6 +76,10 @@ export const Poster = styled.div`
     border-radius: 30px;
     animation: ${scale} 0.5s linear;
   }
+  @media (max-width: 768px) {
+    width: 50%;
+    justify-content: center;
+  }
 `
 export const ContainerButtons = styled.div`
   display: flex;
