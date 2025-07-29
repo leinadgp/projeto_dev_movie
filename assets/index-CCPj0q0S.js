@@ -333,6 +333,10 @@ Please change the parent <Route path="${E}"> to <Route path="${E==="/"?"*":`${E}
     border-radius: 30px;
     animation: ${YT} 0.5s linear;
   }
+  @media (max-width: 768px) {
+    width: 50%;
+    justify-content: center;
+  }
 `,PT=Se.div`
   display: flex;
   gap: 20px;
