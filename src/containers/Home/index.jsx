@@ -82,7 +82,7 @@ function Home() {
         <Slider info={popularSeries} title="Series Mais Populares" />
       )}
       {popularPeople && (
-        <Slider info={popularPeople} title="Artitas Mais Populares" />
+        <Slider info={popularPeople} title="Artitas Mais Popularess" />
       )}
     </>
   )
