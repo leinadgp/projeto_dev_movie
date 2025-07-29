@@ -37,12 +37,17 @@ export const ContainerMain = styled.div`
   height: 100%;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    margin-top: 100px;
+  }
 `
 export const Title = styled.div`
   display: flex;
   padding: 20px;
   width: 45%;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
   h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -50,11 +55,15 @@ export const Title = styled.div`
     margin-bottom: 15px;
   }
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #fff;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+    text-align: justify;
   }
 `
 
@@ -72,4 +81,7 @@ export const ContainerButtons = styled.div`
   display: flex;
   gap: 20px;
   margin-top: 25px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `

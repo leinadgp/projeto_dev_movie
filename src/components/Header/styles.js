@@ -17,6 +17,13 @@ export const Container = styled.div`
   img {
     width: 25%;
   }
+  @media (max-width: 768px) {
+    padding: 4px;
+    justify-content: center;
+    img {
+      width: 0%;
+    }
+  }
 `
 export const Menu = styled.ul`
   list-style: none;
