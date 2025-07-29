@@ -4,7 +4,7 @@ import { Container, Title } from './styles.js'
 function Credits({ credits }) {
   return (
     <>
-      <Title>Créditos</Title>
+      <Title>Créditoss</Title>
       {credits && (
         <Container>
           {credits.slice(0, 5).map((artist) => (
