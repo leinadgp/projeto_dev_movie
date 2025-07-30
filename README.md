@@ -1,12 +1,31 @@
-# React + Vite
+# 🎬 Dev Movies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto web desenvolvido em React que permite explorar filmes populares, ver detalhes, trailers e classificações. A aplicação utiliza uma API externa para buscar os dados dos filmes e apresenta tudo com um design moderno e responsivo.
 
-Currently, two official plugins are available:
+## 🖼️ Demonstração
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Demonstração](dev-movies.png)
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎥 Listagem de filmes populares
+- 🔍 Busca por filmes
+- 📄 Visualização de detalhes do filme (descrição, avaliação, data de lançamento, etc.)
+- 📱 Layout responsivo para desktop e mobile
+- 🎨 Carrossel de filmes com **Swiper.js**
+
+## 🛠️ Tecnologias Utilizadas
+
+- React
+- JavaScript (ES6+)
+- Styled Components
+- React Router DOM
+- Swiper.js (slider de filmes)
+- API The Movie Database (TMDb)
+- Git & GitHub
+- Deploy via GitHub Pages
+
+## 🌐 Projeto online
+
+👉 [Acesse o Dev Movies aqui](https://leinadgp.github.io/projeto_dev_movie)
+
